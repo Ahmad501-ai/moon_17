@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  gap: 232.5px;
+}
+.list ul {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+}
+
+.item ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
