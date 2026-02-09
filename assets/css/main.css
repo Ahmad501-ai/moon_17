@@ -6,10 +6,11 @@
 
 .header {
   display: flex;
-  gap: 232.5px;
-  padding: 21.84px 0;
-  margin: 0 165px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21.84px 165px;
 }
+
 .list ul {
   display: flex;
   gap: 60px;
@@ -21,25 +22,47 @@
   gap: 24px;
   list-style: none;
 }
+
+@media screen and (max-width: 700px) {
+  .list ul,
+  .item ul {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .list ul,
+  .item ul {
+    display: flex;
+  }
+}
 .collections {
   display: flex;
   flex-wrap: wrap;
-    gap: 30px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    /*background-color: blueviolet;*/
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /*background-color: blueviolet;*/
   /* margin-top: 80px;*/
-    margin: 0 165px;
-
-
-
-
 }
-.collection {
-   width: calc( (100% - 90px) / 4);
- /*width: 25%;*/
+
+ .collection {
+  width: 100%;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .collection {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .collection {
+    width: calc((100% - 90px) / 4);
+  }
+}
+  
+
+ 
+
 img {
   width: 100%;
- 
 }
