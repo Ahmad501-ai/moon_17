@@ -3,12 +3,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --prameryfont: "Inter";
+  --pramercolor: #3a3845;
+  --spacer: 4px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "EB Garamond", serif;
+}
+
+body {
+  font-family: var(--prameryfont);
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 21.84px 165px;
+  padding: 20px;
 }
 
 .list ul {
@@ -29,23 +47,16 @@
     display: none;
   }
 }
-@media screen and (min-width: 700px) {
-  .list ul,
-  .item ul {
-    display: flex;
-  }
-}
+
 .collections {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   padding-top: 40px;
   padding-bottom: 40px;
-  /*background-color: blueviolet;*/
-  /* margin-top: 80px;*/
 }
 
- .collection {
+.collection {
   width: 100%;
 }
 
@@ -59,10 +70,112 @@
     width: calc((100% - 90px) / 4);
   }
 }
-  
-
- 
 
 img {
   width: 100%;
+}
+.best-sellers .item {
+  text-align: left;
+  width: calc((100% - 90px) / 4);
+}
+.best-sellers {
+  text-align: center;
+  padding: 80px 0;
+}
+.best-sellers.item-content {
+  margin-top: 24px;
+}
+.best-sellers h2 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+.best-sellers h3 {
+  font-size: px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.best-sellers .price {
+  font-size: 22px;
+  font-weight: 700;
+}
+.best-sellers .row {
+  /*
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  */
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 30px;
+  
+}
+
+.best-sellers .description {
+  width: 80%;
+  color: #807f86;
+  line-height: 22px;
+  margin-top: 24px;
+  margin-bottom: 34px;
+}
+
+.best-sellers .AddToCar {
+  background-color: #fff;
+
+  border: 2px solid #000;
+  padding: 15px 21px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 400px) {
+  .best-sellers .item {
+    width: 100%;
+     
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 700px) {
+  .best-sellers .item {
+    width: calc((100% - 30px) / 2);
+    
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1023px) {
+  .best-sellers .item {
+    width: calc((100% - 60px) / 3);
+    
+  }
+  .best-sellers h3{
+    font-size: 16px;
+  }
+  .best-sellers .AddToCar{
+    padding: 15px 30px;
+     
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .best-sellers .item {
+    width: calc((100% - 90px) / 4);
+     
+  }
+  .best-sellers h3{
+    font-size: 16px;
+  }
+  .best-sellers .AddToCar{
+    padding: 15px 40px;
+     
+  }
 }
