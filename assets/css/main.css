@@ -23,6 +23,7 @@ body {
 }
 
 .header {
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,13 +31,14 @@ body {
   position: fixed;
   z-index: 9;
   width: 100%;
+  background: white;
 }
 
 .slider {
- /* padding: 80px 0;*/
   position: relative;
   width: 100%;
   height: 640px;
+  margin-top: 80px;
 }
 
 .slider-right {
@@ -457,3 +459,133 @@ img {
   }
 }
 
+.blog {
+  padding: 80px 0;
+}
+
+.blog-title {
+  text-align: center;
+  font: size 30px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 60px;
+}
+
+.blog-content {
+  display: flex;
+  align-items: center;
+}
+
+.blog-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.blog-text span {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 6%;
+  color: #807f86;
+  margin-bottom: 16px;
+}
+
+.blog-text h3 {
+  font-size: 28px;
+  letter-spacing: 4px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  color: #3a3845;
+}
+
+.blog-text p {
+  color: #595667;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.blog-text a {
+  color: #595667;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 6%;
+  font-size: 14px;
+}
+
+.blog-image {
+  width: 50%;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 700px) {
+  .blog-content {
+    flex-direction: column;
+  }
+  .blog-text {
+    order: 2;
+    width: 100%;
+  }
+  .blog-image {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.newsletter {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.newsletter span {
+  display: block;
+  color: #595667;
+  margin-bottom: 24px;
+}
+
+.newsletter h2 {
+  font-size: 28px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.newsletter-form input {
+  padding: 15px 24px;
+  border: none;
+  border-bottom: 1px solid #3a3845;
+  width: 400px;
+  text-align: center;
+  outline: none; 
+  border: none;
+}
+
+.newsletter-form button {
+  padding: 15px 24px;
+  border: 1px solid #3a3845;
+  background:white;
+  cursor: pointer;
+  letter-spacing: 8%;
+}
+
+@media (max-width:700px){
+
+.newsletter-form input{
+width:100%;
+}
+
+}
